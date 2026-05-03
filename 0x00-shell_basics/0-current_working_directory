@@ -1,3 +1,2 @@
-#!/usr/bin/env bash
-# This script prints the absolute path of the current working directory
+#!/bin/bash
 pwd

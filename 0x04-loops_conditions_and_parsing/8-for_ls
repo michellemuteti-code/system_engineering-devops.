@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# This script lists files, showing only part after first dash
+# This script lists files after the first dash
 for file in *-*
 do
-  echo "${file#*-}"
+    echo "${file#*-}"
 done

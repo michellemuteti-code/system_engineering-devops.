@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
-# This script lists files after the first dash
-for file in *-*
-do
-    echo "${file#*-}"
+# This script lists files, showing names after the first dash if present
+for file in *; do
+    # Skip hidden files
+    if [[ "$file" == .* ]]; then
+        continue
+    fi
+
+    # If filename contains a dash, strip up to first dash
+    if [[ "$file" == *-* ]]; then
+        echo "${file#*-}"
+    else
+        echo "$file"
+    fi
 done
